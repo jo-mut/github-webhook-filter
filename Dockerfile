@@ -1,6 +1,10 @@
 FROM denoland/deno:1.42.4
 
+
 WORKDIR /app
+
+RUN chown -R deno:deno /app
+
 USER deno
 
 COPY deps.ts .
